@@ -12,8 +12,17 @@ body {
 Timer section
 */
 
-.start-button {
+.buttons {
   margin-top: 5%;
   text-align: center;
   align-self: center;
+}
+
+.timestamp-timer {
+  font-size: 90px;
+  color: white;
+}
+
+.hide {
+  display: none;
 }

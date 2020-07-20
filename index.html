@@ -11,6 +11,7 @@
   
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/scripts/timer.js"></script>
+    <script src="https://kit.fontawesome.com/67e495be7a.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -18,12 +19,20 @@
     <div class="container">
       <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
 
-        <div class="start-button">
-          <button type="button" class="btn btn-success" id="startTimer">Start Timer</button>
-          <p id="display-timer" style="font-size: 90px;"></p>
+        <div class="buttons">
+          <button type="button" class="btn btn-success" id="startTimer">
+            <i class="fas fa-play"></i>&nbsp; Start Timer</button
+          >&nbsp;
+          <button type="button" class="btn btn-warning" id="pauseTimer">
+            <i class="fas fa-pause"></i>&nbsp; Pause Timer</button
+          >&nbsp;
+          <button type="button" class="btn btn-danger" id="resetTimer">
+            <i class="fas fa-stop"></i>&nbsp; Reset Timer
+          </button>
+          <p id="display-timer" class="timestamp-timer"></p>
         </div>
 
-        <div class="progress ">
+        <div class="progress hide" id="hided-content">
           <div id="timer-progressbar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
         </div>
 

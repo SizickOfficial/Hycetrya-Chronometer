@@ -20,6 +20,7 @@ $(document).ready(function(){
       $('#display-timer').html(minutes + "m " + seconds + "s ");
 
       
+      $("#hided-content").css("display", "flex");
       $("#timer-progressbar").width(widthToSet+"%");
 
       if (currentTimer > 290000) {
