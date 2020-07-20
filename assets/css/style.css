@@ -7,6 +7,36 @@ body {
   background-color: #404040;
 }
 
+.navbar {
+  margin-bottom: 20px;
+}
+
+
+.background-navbar {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+
+.background-navbar a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+
+.background-navbar a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
 
 /*
 Timer section
@@ -21,8 +51,4 @@ Timer section
 .timestamp-timer {
   font-size: 90px;
   color: white;
-}
-
-.hide {
-  display: none;
 }
