@@ -1,0 +1,19 @@
+
+/*
+Main page base
+*/
+
+body {
+  background-color: #404040;
+}
+
+
+/*
+Timer section
+*/
+
+.start-button {
+  margin-top: 5%;
+  text-align: center;
+  align-self: center;
+}
