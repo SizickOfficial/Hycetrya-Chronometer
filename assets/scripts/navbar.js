@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
     $("#skyswordButton").click(function () {
         document.getElementById('skysword-content').style.display = 'flex';
         document.getElementById('skydaria-olympe-content').style.display = 'none';
