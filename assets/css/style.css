@@ -83,6 +83,14 @@ Timer section
   margin-left: 15px;
 }
 
+.spacing-container {
+  margin-top: 30px;
+}
+
 /*
 Footer section
 */
+
+.centered {
+  text-align: center;
+}
