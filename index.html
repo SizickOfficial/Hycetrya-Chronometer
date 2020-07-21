@@ -2,63 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Timing</title>
-  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-  
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Timing</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
     <script type="text/javascript" src="./assets/scripts/timer.js"></script>
     <script type="text/javascript" src="./assets/scripts/navbar.js"></script>
-    <script src="https://kit.fontawesome.com/67e495be7a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/67e495be7a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-
     <nav class="background-navbar sticky-top py-1">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between"
+      >
         <a class="py-2" href="index.html" aria-label="Timer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="d-block mx-auto"
+            role="img"
+            viewBox="0 0 24 24"
+            focusable="false"
+          >
             <circle cx="12" cy="12" r="10" />
-            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+            <path
+              d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"
+            />
           </svg>
         </a>
-        <a class="py-2 d-none d-md-inline-block" id="skyswordButton">SkySword</a>
-        <a class="py-2 d-none d-md-inline-block" id="skydariaOlympeButton">Skydaria Olympe</a>
-        <a class="py-2 d-none d-md-inline-block" id="skydariaPirateButton">Skydaria Pirate</a>
-        <a class="py-2 d-none d-md-inline-block" id="hadariaButton">Hadaria</a>
-  
+        <a class="py-2 d-none d-md-inline-block timerTab" id="skyswordButton"
+          >SkySword</a
+        >
+        <a
+          class="py-2 d-none d-md-inline-block timerTab"
+          id="skydariaOlympeButton"
+          >Skydaria Olympe</a
+        >
+        <a
+          class="py-2 d-none d-md-inline-block timerTab"
+          id="skydariaPirateButton"
+          >Skydaria Pirate</a
+        >
+        <a class="py-2 d-none d-md-inline-block timerTab" id="hadariaButton"
+          >Hadaria</a
+        >
       </div>
     </nav>
 
     <!--SkySword-->
     <div class="container" id="skysword-content">
       <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
-
         <div class="alert alert-danger text-center" role="alert">
           SkySword Timer
         </div>
 
         <div class="buttons">
-          <button type="button" class="btn btn-success" id="startTimer">
-            <i class="fas fa-play"></i>&nbsp; Start Timer</button>&nbsp;
-          
-          <button type="button" class="btn btn-warning" id="pauseTimer">
-            <i class="fas fa-pause"></i>&nbsp; Pause Timer</button>&nbsp;
-          
-          <button type="button" class="btn btn-danger" id="resetTimer">
-            <i class="fas fa-stop"></i>&nbsp; Reset Timer
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSkySword"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
           </button>
 
-          <p id="display-timer" class="timestamp-timer"></p>
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSkySword"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSkySword"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSkySword"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+
+          <p id="display-timer-skysword" class="timestamp-timer"></p>
         </div>
 
-        <div class="progress hide" id="hided-content">
-          <div id="timer-progressbar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        <div class="progress hide" id="hided-content-skysword">
+          <div
+            id="timer-progressbar-skysword"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
         </div>
-
       </div>
     </div>
     <!--SkySword-->
@@ -66,28 +138,59 @@
     <!--Skydaria Olympe-->
     <div class="container hide" id="skydaria-olympe-content">
       <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
-
         <div class="alert alert-danger text-center" role="alert">
           Skydaria Olympe Timer
         </div>
 
         <div class="buttons">
-          <button type="button" class="btn btn-success" id="startTimer">
-            <i class="fas fa-play"></i>&nbsp; Start Timer</button
-          >&nbsp;
-          <button type="button" class="btn btn-warning" id="pauseTimer">
-            <i class="fas fa-pause"></i>&nbsp; Pause Timer</button
-          >&nbsp;
-          <button type="button" class="btn btn-danger" id="resetTimer">
-            <i class="fas fa-stop"></i>&nbsp; Reset Timer
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSkydariaOlympe"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
           </button>
-          <p id="display-timer" class="timestamp-timer"></p>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSkydariaOlympe"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSkydariaOlympe"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSkydariaOlympe"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-skydariaolympe" class="timestamp-timer"></p>
         </div>
 
-        <div class="progress hide" id="hided-content">
-          <div id="timer-progressbar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        <div class="progress hide" id="hided-content-skydariaolympe">
+          <div
+            id="timer-progressbar-skydariaolympe"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
         </div>
-
       </div>
     </div>
     <!--Skydaria Olympe-->
@@ -95,28 +198,59 @@
     <!--Skydaria Pirate-->
     <div class="container hide" id="skydaria-pirate-content">
       <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
-
         <div class="alert alert-danger text-center" role="alert">
           Skydaria Pirate Timer
         </div>
 
         <div class="buttons">
-          <button type="button" class="btn btn-success" id="startTimer">
-            <i class="fas fa-play"></i>&nbsp; Start Timer</button
-          >&nbsp;
-          <button type="button" class="btn btn-warning" id="pauseTimer">
-            <i class="fas fa-pause"></i>&nbsp; Pause Timer</button
-          >&nbsp;
-          <button type="button" class="btn btn-danger" id="resetTimer">
-            <i class="fas fa-stop"></i>&nbsp; Reset Timer
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSkydariaPirate"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
           </button>
-          <p id="display-timer" class="timestamp-timer"></p>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSkydariaPirate"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSkydariaPirate"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSkydariaPirate"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-skydariapirate" class="timestamp-timer"></p>
         </div>
 
-        <div class="progress hide" id="hided-content">
-          <div id="timer-progressbar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        <div class="progress hide" id="hided-content-skydariapirate">
+          <div
+            id="timer-progressbar-skydariapirate"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
         </div>
-
       </div>
     </div>
     <!--Skydaria Pirate-->
@@ -124,31 +258,61 @@
     <!--Hadaria-->
     <div class="container hide" id="hadaria-content">
       <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
-
         <div class="alert alert-danger text-center" role="alert">
           Hadaria Timer
         </div>
 
         <div class="buttons">
-          <button type="button" class="btn btn-success" id="startTimer">
-            <i class="fas fa-play"></i>&nbsp; Start Timer</button
-          >&nbsp;
-          <button type="button" class="btn btn-warning" id="pauseTimer">
-            <i class="fas fa-pause"></i>&nbsp; Pause Timer</button
-          >&nbsp;
-          <button type="button" class="btn btn-danger" id="resetTimer">
-            <i class="fas fa-stop"></i>&nbsp; Reset Timer
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerHadaria"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
           </button>
-          <p id="display-timer" class="timestamp-timer"></p>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerHadaria"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerHadaria"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerHadaria"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-hadaria" class="timestamp-timer"></p>
         </div>
 
-        <div class="progress hide" id="hided-content">
-          <div id="timer-progressbar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        <div class="progress hide" id="hided-content-hadaria">
+          <div
+            id="timer-progressbar-hadaria"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
         </div>
-
       </div>
     </div>
     <!--Hadaria-->
-
   </body>
 </html>

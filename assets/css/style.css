@@ -1,4 +1,3 @@
-
 /*
 Main page base
 */
@@ -11,17 +10,15 @@ body {
   margin-bottom: 20px;
 }
 
-
 .background-navbar {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 
-
 .background-navbar a {
   color: #999;
-  transition: ease-in-out color .15s;
+  transition: ease-in-out color 0.15s;
 }
 
 .background-navbar a:hover {
@@ -37,6 +34,9 @@ body {
   display: flex;
 }
 
+.timerTab:hover {
+  cursor: pointer;
+}
 
 /*
 Timer section
@@ -51,4 +51,8 @@ Timer section
 .timestamp-timer {
   font-size: 90px;
   color: white;
+}
+
+.spacing-button {
+  margin-left: 15px;
 }
