@@ -91,6 +91,15 @@ Timer section
 Footer section
 */
 
+.modal-background {
+  background-color: #303030;
+  color: white;
+}
+
+.modal-close-button {
+  color: white;
+}
+
 .centered {
   text-align: center;
 }
