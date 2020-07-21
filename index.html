@@ -18,8 +18,19 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="./assets/scripts/timer.js"></script>
     <script type="text/javascript" src="./assets/scripts/navbar.js"></script>
@@ -324,29 +335,177 @@
     <!--Hadaria-->
 
     <!--Team Modal-->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div
+      class="modal fade bd-example-modal-lg creditsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Credits</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
           <div class="row">
             <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+              <div
+                class="card"
+                style="width: 100%; height: 100%; text-align: center;"
+              >
+                <img
+                  class="card-img-top buttons"
+                  src="./assets/img/owner-logo/hyceman.png"
+                  alt="Hyceman Icon"
+                />
                 <div class="card-body">
                   <h5 class="card-title">Hyceman</h5>
-                  <p class="card-text">Inventeur de ce projet, de par sa folie il l'a créé de façon à ce que ça fonctionne.</p>
+                  <p class="card-text">
+                    Inventeur de ce projet, de par sa folie il l'a créé de façon
+                    à ce que ça fonctionne.
+                  </p>
                 </div>
               </div>
             </div>
 
             <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="./assets/img/owner-logo/notrya.png" alt="Notrya Icon">
+              <div
+                class="card"
+                style="width: 100%; height: 100%; text-align: center;"
+              >
+                <img
+                  class="card-img-top buttons"
+                  src="./assets/img/owner-logo/notrya.png"
+                  alt="Notrya Icon"
+                />
                 <div class="card-body">
                   <h5 class="card-title">Notrya (Szk)</h5>
-                  <p class="card-text">Découvrant les folie d'Hyceman, il a choisi de le motiver et l'aider à terminer ce projet et le rendre mieux que jamais Hyceman ne l'aurais pensé.</p>
+                  <p class="card-text">
+                    Découvrant les folie d'Hyceman, il a choisi de le motiver et
+                    l'aider à terminer ce projet et le rendre mieux que jamais
+                    Hyceman ne l'aurait pensé.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade helpModal"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Aide</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+            voluptate tempore necessitatibus rem consequuntur rerum, provident
+            labore animi accusantium. Laboriosam eum mollitia eligendi est
+            placeat eos? Quis eligendi atque iusto. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Ut atque quas animi necessitatibus?
+            Debitis natus ipsam soluta, possimus eveniet nemo omnis perspiciatis
+            reiciendis quia repudiandae distinctio quisquam eos a modi. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Odio qui
+            deserunt, suscipit quos atque enim autem consectetur dolores non
+            voluptates nemo explicabo quas repellendus eveniet id asperiores
+            facilis eum itaque. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aspernatur magnam sunt officiis perferendis
+            similique atque placeat, quod, ut iste tempora hic quis quo ducimus
+            facere perspiciatis. Architecto blanditiis vel deserunt. Lorem ipsum
+            dolor sit, amet consectetur adipisicing elit. Doloribus rerum ipsa
+            laboriosam earum delectus ducimus saepe unde consectetur aspernatur
+            quas! Facere magnam minima nisi accusantium ullam iure ipsum
+            distinctio dolor. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Assumenda dolore commodi quos. Qui optio, explicabo
+            reprehenderit tempora harum animi mollitia tempore nobis, officia
+            dicta at dolorem quaerat. Id, voluptatum omnis! Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. Pariatur voluptate tempore
+            necessitatibus rem consequuntur rerum, provident labore animi
+            accusantium. Laboriosam eum mollitia eligendi est placeat eos? Quis
+            eligendi atque iusto. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Ut atque quas animi necessitatibus? Debitis natus
+            ipsam soluta, possimus eveniet nemo omnis perspiciatis reiciendis
+            quia repudiandae distinctio quisquam eos a modi. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Odio qui deserunt, suscipit
+            quos atque enim autem consectetur dolores non voluptates nemo
+            explicabo quas repellendus eveniet id asperiores facilis eum itaque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            magnam sunt officiis perferendis similique atque placeat, quod, ut
+            iste tempora hic quis quo ducimus facere perspiciatis. Architecto
+            blanditiis vel deserunt. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Doloribus rerum ipsa laboriosam earum delectus
+            ducimus saepe unde consectetur aspernatur quas! Facere magnam minima
+            nisi accusantium ullam iure ipsum distinctio dolor. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Assumenda dolore
+            commodi quos. Qui optio, explicabo reprehenderit tempora harum animi
+            mollitia tempore nobis, officia dicta at dolorem quaerat. Id,
+            voluptatum omnis! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Pariatur voluptate tempore necessitatibus rem
+            consequuntur rerum, provident labore animi accusantium. Laboriosam
+            eum mollitia eligendi est placeat eos? Quis eligendi atque iusto.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut atque
+            quas animi necessitatibus? Debitis natus ipsam soluta, possimus
+            eveniet nemo omnis perspiciatis reiciendis quia repudiandae
+            distinctio quisquam eos a modi. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Odio qui deserunt, suscipit quos atque
+            enim autem consectetur dolores non voluptates nemo explicabo quas
+            repellendus eveniet id asperiores facilis eum itaque. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Aspernatur magnam sunt
+            officiis perferendis similique atque placeat, quod, ut iste tempora
+            hic quis quo ducimus facere perspiciatis. Architecto blanditiis vel
+            deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Doloribus rerum ipsa laboriosam earum delectus ducimus saepe unde
+            consectetur aspernatur quas! Facere magnam minima nisi accusantium
+            ullam iure ipsum distinctio dolor. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Assumenda dolore commodi quos. Qui
+            optio, explicabo reprehenderit tempora harum animi mollitia tempore
+            nobis, officia dicta at dolorem quaerat. Id, voluptatum omnis! Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+            voluptate tempore necessitatibus rem consequuntur rerum, provident
+            labore animi accusantium. Laboriosam eum mollitia eligendi est
+            placeat eos? Quis eligendi atque iusto. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Ut atque quas animi necessitatibus?
+            Debitis natus ipsam soluta, possimus eveniet nemo omnis perspiciatis
+            reiciendis quia repudiandae distinctio quisquam eos a modi. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Odio qui
+            deserunt, suscipit quos atque enim autem consectetur dolores non
+            voluptates nemo explicabo quas repellendus eveniet id asperiores
+            facilis eum itaque. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aspernatur magnam sunt officiis perferendis
+            similique atque placeat, quod, ut iste tempora hic quis quo ducimus
+            facere perspiciatis. Architecto blanditiis vel deserunt. Lorem ipsum
+            dolor sit, amet consectetur adipisicing elit. Doloribus rerum ipsa
+            laboriosam earum delectus ducimus saepe unde consectetur aspernatur
+            quas! Facere magnam minima nisi accusantium ullam iure ipsum
+            distinctio dolor. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Assumenda dolore commodi quos. Qui optio, explicabo
+            reprehenderit tempora harum animi mollitia tempore nobis, officia
+            dicta at dolorem quaerat. Id, voluptatum omnis!
           </div>
         </div>
       </div>
@@ -356,10 +515,24 @@
     <footer class="container-fluid py-4">
       <div class="row">
         <div class="col-md-3 offset-md-3 centered">
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-lg">Aide</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target=".helpModal"
+          >
+            Aide
+          </button>
         </div>
         <div class="col-md-3 centered">
-          <button type="button" class="btn btn-secondary">Credits</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target=".creditsModal"
+          >
+            Credits
+          </button>
         </div>
       </div>
     </footer>
