@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hycetrya Chronomètre</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./assets/scripts/timer.js"></script>
+    <script type="text/javascript" src="./assets/scripts/navbar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/67e495be7a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="background-navbar sticky-top py-1">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between"
+      >
+        <a class="py-2" href="index.html" aria-label="Timer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="d-block mx-auto"
+            role="img"
+            viewBox="0 0 24 24"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"
+            />
+          </svg>
+        </a>
+        <a class="py-2 d-none d-md-inline-block timerTab" id="skyswordButton"
+          >SkySword</a
+        >
+        <a
+          class="py-2 d-none d-md-inline-block timerTab"
+          id="skydariaOlympeButton"
+          >Skydaria Olympe</a
+        >
+        <a
+          class="py-2 d-none d-md-inline-block timerTab"
+          id="skydariaPirateButton"
+          >Skydaria Pirate</a
+        >
+        <a class="py-2 d-none d-md-inline-block timerTab" id="hadariaButton"
+          >Hadaria</a
+        >
+
+        <button id="close-electron" type="button" class="btn navbar-close-electron hide" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </nav>
+
+    <!--SkySword-->
+    <div class="container spacing-container" id="skysword-content">
+      <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
+        <img
+          src="./assets/img/server-icon/skysword.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+
+        <div class="buttons">
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSkySword"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
+          </button>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSkySword"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSkySword"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSkySword"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+
+          <p id="display-timer-skysword" class="timestamp-timer"></p>
+        </div>
+
+        <div class="progress hide" id="hided-content-skysword">
+          <div
+            id="timer-progressbar-skysword"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--SkySword-->
+
+    <!--Skydaria Olympe-->
+    <div class="container spacing-container hide" id="skydaria-olympe-content">
+      <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
+        <img
+          src="./assets/img/server-icon/skydaria.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+
+        <div class="buttons">
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSkydariaOlympe"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
+          </button>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSkydariaOlympe"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSkydariaOlympe"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSkydariaOlympe"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-skydariaolympe" class="timestamp-timer"></p>
+        </div>
+
+        <div class="progress hide" id="hided-content-skydariaolympe">
+          <div
+            id="timer-progressbar-skydariaolympe"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--Skydaria Olympe-->
+
+    <!--Skydaria Pirate-->
+    <div class="container spacing-container hide" id="skydaria-pirate-content">
+      <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
+        <img
+          src="./assets/img/server-icon/skydaria.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+
+        <div class="buttons">
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSkydariaPirate"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
+          </button>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSkydariaPirate"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSkydariaPirate"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSkydariaPirate"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-skydariapirate" class="timestamp-timer"></p>
+        </div>
+
+        <div class="progress hide" id="hided-content-skydariapirate">
+          <div
+            id="timer-progressbar-skydariapirate"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--Skydaria Pirate-->
+
+    <!--Hadaria-->
+    <div class="container spacing-container hide" id="hadaria-content">
+      <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
+        <img
+          src="./assets/img/server-icon/hadaria.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+
+        <div class="buttons">
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerHadaria"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
+          </button>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerHadaria"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerHadaria"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerHadaria"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-hadaria" class="timestamp-timer"></p>
+        </div>
+
+        <div class="progress hide" id="hided-content-hadaria">
+          <div
+            id="timer-progressbar-hadaria"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--Hadaria-->
+
+    <!--Team Modal-->
+    <div
+      class="modal fade bd-example-modal-lg creditsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modal-background">
+          <div class="modal-header">
+            <h5 class="modal-title">Credits</h5>
+            <button
+              type="button"
+              class="close rounded modal-close-button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div
+                class="card modal-background"
+                style="width: 100%; height: 100%; text-align: center;"
+              >
+                <img
+                  class="card-img-top buttons"
+                  src="./assets/img/owner-logo/hyceman.png"
+                  alt="Hyceman Icon"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Hyceman</h5>
+                  <p class="card-text">
+                    Inventeur de ce projet, de par sa folie il l'a créé de façon
+                    à ce que ça fonctionne.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="card modal-background"
+                style="width: 100%; height: 100%; text-align: center;"
+              >
+                <img
+                  class="card-img-top buttons"
+                  src="./assets/img/owner-logo/notrya.png"
+                  alt="Notrya Icon"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Notrya (Szk)</h5>
+                  <p class="card-text">
+                    Découvrant les folie d'Hyceman, il a choisi de le motiver et
+                    l'aider à terminer ce projet et le rendre mieux que jamais
+                    Hyceman ne l'aurait pensé.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Team Modal-->
+
+    <!--Aide Modal-->
+    <div
+      class="modal fade helpModal"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-background">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Aide</h5>
+            <button
+              type="button"
+              class="close rounded modal-close-button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Bienvenue sur le site des chronomètre pour les serveur possédant un jeu de mot à trouvé dans le tchat tout les X temps<br><br>
+
+            Vous devez cliquer sur le bouton start du serveur en question lorsque le message du mot à trouvé apparaît pour démarrer
+            le chronomètre qui tournera en boucle tout seul.<br>
+            Notez qu'un bip sonore se fera entendre 15 secondes avant la fin du chronomètre<br><br>
+
+            Si vous souhaitez que nous ajoutons un serveur possédant la même animation dans son tchat ou nous faire parvenir une suggestion,
+            veuillez nous contacter sur discord via <kbd>Notrya#7885</kbd> ou <kbd>Hyceman#6969</kbd>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Aide Modal-->
+
+    <footer class="container-fluid py-4">
+      <div class="row">
+        <div class="col-md-3 offset-md-3 centered">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target=".helpModal"
+          >
+            Aide
+          </button>
+        </div>
+        <div class="col-md-3 centered">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target=".creditsModal"
+          >
+            Credits
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
