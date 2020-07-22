@@ -32,6 +32,16 @@ img {
   height: auto;
 }
 
+.navbar-close-electron {
+  color: white;
+  background-color: #6c6c6c;
+}
+
+.navbar-close-electron:hover {
+  color: white;
+  background-color: red;
+}
+
 .navbar {
   margin-bottom: 20px;
 }
@@ -98,6 +108,11 @@ Footer section
 
 .modal-close-button {
   color: white;
+}
+
+.modal-close-button:hover {
+  color: white;
+  background-color: red;
 }
 
 .centered {
