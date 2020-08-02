@@ -6,7 +6,7 @@ $(document).ready(function () {
   */
 
   const cooldown = {
-    skySword: 305000,
+    skySword: 360000,
     skydariaOlympe: 300000,
     skydariaPirate: 315000,
     hadaria: 125000,
