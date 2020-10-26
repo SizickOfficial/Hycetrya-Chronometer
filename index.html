@@ -66,31 +66,15 @@
             />
           </svg>
         </a>
-        <a class="py-2 d-none d-md-inline-block timerTab" id="skyswordButton"
-          >SkySword</a
-        >
-        <a
-          class="py-2 d-none d-md-inline-block timerTab"
-          id="skydariaOlympeButton"
-          >Skydaria Olympe</a
-        >
-        <a
-          class="py-2 d-none d-md-inline-block timerTab"
-          id="skydariaPirateButton"
-          >Skydaria Pirate</a
-        >
-        <a class="py-2 d-none d-md-inline-block timerTab" id="hadariaButton"
-          >Hadaria</a
-        >
+        <a class="py-2 d-none d-md-inline-block timerTab" id="skyswordButton">SkySword</a>
 
-        <button
-          id="close-electron"
-          type="button"
-          class="btn navbar-close-electron hide"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <a class="py-2 d-none d-md-inline-block timerTab" id="seasonskyButton">SeasonSky</a>
+
+        <a class="py-2 d-none d-md-inline-block timerTab" id="skydariaOlympeButton">Skydaria Olympe</a>
+        
+        <a class="py-2 d-none d-md-inline-block timerTab" id="skydariaPirateButton">Skydaria Pirate</a>
+        
+        <a class="py-2 d-none d-md-inline-block timerTab" id="hadariaButton">Hadaria</a>
       </div>
     </nav>
 
@@ -156,6 +140,68 @@
       </div>
     </div>
     <!--SkySword-->
+
+    <!--SeasonSky-->
+    <div class="container spacing-container hide" id="seasonsky-content">
+      <div id="contenu" style="margin: auto; width: 60%; padding: 10px;">
+        <img
+          src="./assets/img/server-icon/seasonsky.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+
+        <div class="buttons">
+          <button
+            type="button"
+            class="btn btn-success spacing-button"
+            id="startTimerSeasonSky"
+          >
+            <i class="fas fa-play"></i>&nbsp; Start
+          </button>
+
+          <button
+            type="button"
+            style="display: none;"
+            class="btn btn-primary spacing-button"
+            id="resumeTimerSeasonSky"
+          >
+            <i class="fas fa-play"></i>&nbsp; Resume
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-warning spacing-button"
+            id="pauseTimerSeasonSky"
+            disabled="true"
+          >
+            <i class="fas fa-pause"></i>&nbsp; Pause
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger spacing-button"
+            id="resetTimerSeasonSky"
+            disabled="true"
+          >
+            <i class="fas fa-stop"></i>&nbsp; Reset
+          </button>
+          <p id="display-timer-seasonsky" class="timestamp-timer"></p>
+        </div>
+
+        <div class="progress hide" id="hided-content-seasonsky">
+          <div
+            id="timer-progressbar-seasonsky"
+            class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--SeasonSky-->
 
     <!--Skydaria Olympe-->
     <div class="container spacing-container hide" id="skydaria-olympe-content">
